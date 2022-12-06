@@ -30,9 +30,11 @@ namespace ComplexAlgebra
                 {
                     return "";
                 }
-                var a = Im > 0
-                    ? "+"
-                    : "-";
+                var a = Im < 0
+                    ? "-"
+                    : Real == 0
+                        ? ""
+                        : "+";
                 return a + (Abs(Im) == 1 ? "i": Im.ToString());
             }
         }
